@@ -30,7 +30,7 @@ public class Controller {
         Feedback saved = feedbackrepo.save(feedback);
         try {
             emailService.sendEmail(
-                "jayasrimurugan200@gmail.com",
+                "aoimidoridigital@gmail.com",
                 "New Feedback from " + feedback.getName(),
                 "Name: " + feedback.getName() + "\nEmail: " + feedback.getEmail() + "\nMessage:\n" + feedback.getMessage()
             );
@@ -51,7 +51,7 @@ public class Controller {
         Enquiry saved = enquiryrepo.save(enquiry);
         try {
             emailService.sendEmail(
-                "jayasrimurugan200@gmail.com",
+                "aoimidoridigital@gmail.com",
                 "New Enquiry from " + enquiry.getName(),
                 "Name: " + enquiry.getName() + "\nEmail: " + enquiry.getEmail() +
                 "\nSubject: " + enquiry.getSubject() + "\nMessage:\n" + enquiry.getMessage()
@@ -73,7 +73,7 @@ public class Controller {
         Booking saved = bookingrepo.save(booking);
         try {
             emailService.sendEmail(
-                "jayasrimurugan200@gmail.com",
+                "aoimidoridigital@gmail.com",
                 "New Booking from " + booking.getName(),
                 "Name: " + booking.getName() + "\nEmail: " + booking.getEmail() +
                 "\nService: " + booking.getService() + "\nDate: " + booking.getDate() +
