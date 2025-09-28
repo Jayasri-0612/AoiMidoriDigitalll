@@ -17,7 +17,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--light);
-    background-color: var(--darker);
+    background:linear-gradient(135deg, #f0f9ff 0%, #f0fff4 100%);
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -25,6 +25,7 @@ body {
 h1, h2, h3, h4 {
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
+    color: var(--light);
 }
 
 a {
@@ -47,13 +48,13 @@ a {
     height: 100%;
     z-index: -2;
     overflow: hidden;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .line {
     position: absolute;
     background: var(--primary);
-    box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+    box-shadow: 0 0 15px var(--primary), 0 0 30px var(--primary), 0 0 45px var(--primary);
     opacity: 0.3;
 }
 
@@ -117,7 +118,7 @@ a {
 .shape-3 {
     width: 400px;
     height: 400px;
-    background: #4fd1c5;
+    background: #00D4AA;
     top: 50%;
     left: 70%;
     animation: float 12s infinite ease-in-out;
@@ -125,13 +126,16 @@ a {
 
 /* Header & Navigation */
 header {
-    background-color: rgba(18, 18, 18, 0.8);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, 
+        rgba(0, 201, 167, 0.1) 0%, 
+        rgba(74, 144, 226, 0.1) 100%);
+    box-shadow: 0 2px 30px rgba(0, 201, 167, 0.2);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 201, 167, 0.2);
 }
 
 nav {
@@ -148,16 +152,21 @@ nav {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    box-shadow: 0 0 15px rgba(108, 99, 255, 0.5);
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 8px 25px rgba(0, 201, 167, 0.4);
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
 
 .logo-img svg {
     width: 30px;
@@ -184,29 +193,39 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 30px;
+    margin-left: 35px;
 }
 
 .nav-links a {
-    font-weight: 500;
-    transition: color 0.3s;
+    color: #1a365d !important; /* Same dark blue as your hero text */
+    font-weight: 600;
+    transition: all 0.3s ease;
     position: relative;
     cursor: pointer;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary);
-    transition: width 0.3s;
+    font-size: 1.1rem;
 }
 
 .nav-links a:hover {
+    color: var(--primary) !important; /* Green color on hover */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+.nav-links a:hover {
     color: var(--primary);
+    transform: translateY(-2px);
 }
 
 .nav-links a:hover::after {
@@ -222,7 +241,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    padding: 180px 0 100px;
+    padding: 200px 0 120px;
     text-align: center;
     position: relative;
 }
@@ -235,21 +254,23 @@ nav {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 3.8rem;
+    margin-bottom: 25px;
     animation: fadeIn 1s ease;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+    text-shadow: 0 8px 25px rgba(0, 201, 167, 0.3);
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+    margin-bottom: 35px;
     opacity: 0.9;
     animation: fadeIn 1.5s ease;
-    color: #ccc;
+    color: #4a5568;
+    font-weight: 400;
 }
 
 .btn {
@@ -273,12 +294,12 @@ nav {
 
 /* About Section */
 .section {
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .section-title h2 {
@@ -297,7 +318,7 @@ nav {
     transform: translateX(-50%);
     width: 70px;
     height: 4px;
-    background: var(--primary);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
     border-radius: 2px;
 }
 
@@ -332,17 +353,59 @@ nav {
     order: 1;
 }
 
+/* Change About Me section to black */
 .about-text h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: var(--light);
+    color: #000000 !important;
 }
 
 .about-text p {
-    margin-bottom: 15px;
-    color: #ccc;
+    color: #000000 !important;
+}
+/* About Section Hover Effect */
+.about-content {
+    transition: all 0.3s ease;
+    padding: 30px;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
+.about-content:hover {
+    background: linear-gradient(135deg, rgba(0, 201, 167, 0.1) 0%, rgba(74, 144, 226, 0.1) 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 201, 167, 0.2);
+}
+
+.about-content:hover .about-text h3 {
+    color: var(--primary) !important;
+}
+
+.about-content:hover .about-text p {
+    color: #1a365d !important;
+}
+
+/* If you have section title for About Me */
+.section-title h2 {
+    color: #000000 !important;
+}
+
+/* Make sure all text in about section is black */
+.about-text {
+    color: #000000 !important;
+}
+
+.about-text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #000000 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.7 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400 !important;
+    margin-bottom: 25px !important;
+}
 /* Company Info Section */
 .company-info {
     background: rgba(18, 18, 18, 0.7);
@@ -386,8 +449,17 @@ nav {
 }
 
 .achievement p {
-    color: #ccc;
+    color: #0a0a0a;
 }
+/* Company Section Hover Effect */
+.company-info {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+
 
 /* Skills Section */
 .skills {
@@ -427,7 +499,7 @@ nav {
 }
 
 .skill p {
-    color: #ccc;
+    color: #020202;
 }
 
 /* Projects Section */
@@ -477,7 +549,7 @@ nav {
 }
 
 .project-info p {
-    color: #ccc;
+    color: #070707;
     margin-bottom: 15px;
 }
 
@@ -495,6 +567,27 @@ nav {
     font-size: 0.8rem;
     color: var(--primary);
 }
+/* Projects Section Hover Effect */
+.projects-container {
+    transition: all 0.3s ease;
+}
+
+.project {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project:hover {
+    background: linear-gradient(135deg, rgba(0, 201, 167, 0.1) 0%, rgba(74, 144, 226, 0.1) 100%) !important;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 201, 167, 0.3) !important;
+}
+
+.project:hover h3 {
+    color: var(--primary) !important;
+}
+
+
 
 /* Forms Section */
 .forms-section {
@@ -601,6 +694,16 @@ nav {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
 }
+/* Book Your Slot Section - Text Only Hover */
+.booking-section {
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.booking-section:hover h2 {
+    color: var(--primary) !important;
+}
+
 
 /* Footer */
 footer {
@@ -610,6 +713,37 @@ footer {
     padding: 30px 0;
     margin-top: 100px;
     backdrop-filter: blur(10px);
+}
+/* Floating Social Icons */
+.social-icons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 12px;
+    z-index: 1100;
+}
+
+.social-icons a {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(108, 99, 255, 0.5);
+}
+
+.social-icons i {
+    font-size: 22px;
 }
 
 /* Contact Info Box Styles */
