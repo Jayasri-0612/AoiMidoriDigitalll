@@ -118,3 +118,39 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     };
     sendBooking(bookingData);
 });
+
+// Project Filtering with Client Overview
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const clientsOverview = document.getElementById('clientsOverview');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            // Filter timeline items
+            timelineItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+            
+            // Show/hide clients overview for digital marketing
+            if (filter === 'marketing') {
+                clientsOverview.classList.remove('hidden');
+            } else {
+                clientsOverview.classList.add('hidden');
+            }
+        });
+    });
+});
+
+// Rest of your existing JavaScript remains the same...
