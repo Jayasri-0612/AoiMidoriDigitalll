@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -662,6 +663,77 @@
     </div>
 </section>
 
+    <!-- Facebook Campaign Section 
+    <section id="campaign" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Facebook Campaign Overview</h2>
+                <p>Elite M Commerce Performance Analysis</p>
+            </div>
+            
+            <div class="campaign-overview">
+                <!-- Metrics Cards 
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">150,000</div>
+                        <div class="metric-label">Reach</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">100,000</div>
+                        <div class="metric-label">Leads</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">50,000</div>
+                        <div class="metric-label">Cost/Lead</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$0</div>
+                        <div class="metric-label">Spend</div>
+                    </div>
+                </div>
+                
+                <!-- Performance Chart 
+                <div class="performance-chart">
+                    <div class="chart-title">Performance Metrics - August 2025</div>
+                    <div class="chart-bars">
+                        <div class="chart-bar">
+                            <div class="bar-fill reach" style="height: 85%"></div>
+                            <div class="bar-label">Reach</div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-fill leads" style="height: 60%"></div>
+                            <div class="bar-label">Leads</div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-fill cost-lead" style="height: 40%"></div>
+                            <div class="bar-label">Cost/Lead</div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-fill spend" style="height: 75%"></div>
+                            <div class="bar-label">Spend</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Insights 
+                <div class="insights-container">
+                    <div class="insight-card">
+                        <h3><i class="fas fa-chart-line"></i> Campaign Insights</h3>
+                        <p>Our Elite M Commerce campaign demonstrated significant reach expansion, growing from $2,000 to $18,000 impressions month-over-month while optimizing for cost efficiency.</p>
+                    </div>
+                    
+                    <div class="insight-card optimization">
+                        <h3><i class="fas fa-cogs"></i> Optimization Results</h3>
+                        <p>Through strategic refinements, we reduced cost per lead by decreased overall spend by $426, maximizing budget efficiency. (from $2.60 to $2.00)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+
     <!-- Forms Section -->
     <section id="forms" class="section">
         <div class="container">
@@ -672,18 +744,18 @@
                 <!-- Feedback Form -->
                 <div class="form-card">
                     <h3><i class="fas fa-comment"></i> Feedback</h3>
-                    <form>
+                    <form id="feedbackForm">
                         <div class="form-group">
-                            <label for="feedback-name">Your Name</label>
-                            <input type="text" id="feedback-name" required>
+                            <label for="feedbackName">Your Name</label>
+                            <input type="text" id="feedbackName" required>
                         </div>
                         <div class="form-group">
-                            <label for="feedback-email">Your Email</label>
-                            <input type="email" id="feedback-email" required>
+                            <label for="feedbackEmail">Your Email</label>
+                            <input type="email" id="feedbackEmail" required>
                         </div>
                         <div class="form-group">
-                            <label for="feedback-message">Your Feedback</label>
-                            <textarea id="feedback-message" required></textarea>
+                            <label for="feedbackMessage">Your Feedback</label>
+                            <textarea id="feedbackMessage" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Submit Feedback</button>
                     </form>
@@ -692,22 +764,22 @@
                 <!-- Enquiry Form -->
                 <div class="form-card">
                     <h3><i class="fas fa-question-circle"></i> Enquiry</h3>
-                    <form>
+                    <form id="enquiryForm">
                         <div class="form-group">
-                            <label for="enquiry-name">Your Name</label>
-                            <input type="text" id="enquiry-name" required>
+                            <label for="enquiryName">Your Name</label>
+                            <input type="text" id="enquiryName" required>
                         </div>
                         <div class="form-group">
-                            <label for="enquiry-email">Your Email</label>
-                            <input type="email" id="enquiry-email" required>
+                            <label for="enquiryEmail">Your Email</label>
+                            <input type="email" id="enquiryEmail" required>
                         </div>
                         <div class="form-group">
-                            <label for="enquiry-subject">Subject</label>
-                            <input type="text" id="enquiry-subject" required>
+                            <label for="enquirySubject">Subject</label>
+                            <input type="text" id="enquirySubject" required>
                         </div>
                         <div class="form-group">
-                            <label for="enquiry-message">Your Message</label>
-                            <textarea id="enquiry-message" required></textarea>
+                            <label for="enquiryMessage">Your Message</label>
+                            <textarea id="enquiryMessage" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Send Enquiry</button>
                     </form>
@@ -723,18 +795,18 @@
                 <h2>Book Your Slot</h2>
             </div>
             <div class="booking-container">
-                <form>
+                <form id="bookingForm">
                     <div class="form-group">
-                        <label for="booking-name">Your Name</label>
-                        <input type="text" id="booking-name" required>
+                        <label for="bookingName">Your Name</label>
+                        <input type="text" id="bookingName" required>
                     </div>
                     <div class="form-group">
-                        <label for="booking-email">Your Email</label>
-                        <input type="email" id="booking-email" required>
+                        <label for="bookingEmail">Your Email</label>
+                        <input type="email" id="bookingEmail" required>
                     </div>
                     <div class="form-group">
-                        <label for="booking-service">Service</label>
-                        <select id="booking-service" required>
+                        <label for="bookingService">Service</label>
+                        <select id="bookingService" required>
                             <option value="">Select a service</option>
                             <option value="consultation">Consultation</option>
                             <option value="web-development">Web Development</option>
@@ -743,12 +815,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="booking-date">Preferred Date</label>
-                        <input type="date" id="booking-date" required>
+                        <label for="bookingDate">Preferred Date</label>
+                        <input type="date" id="bookingDate" required>
                     </div>
                     <div class="form-group">
-                        <label for="booking-time">Preferred Time</label>
-                        <select id="booking-time" required>
+                        <label for="bookingTime">Preferred Time</label>
+                        <select id="bookingTime" required>
                             <option value="">Select a time</option>
                             <option value="9:00">9:00 AM</option>
                             <option value="11:00">11:00 AM</option>
@@ -757,8 +829,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="booking-message">Additional Message (Optional)</label>
-                        <textarea id="booking-message"></textarea>
+                        <label for="bookingMessage">Additional Message (Optional)</label>
+                        <textarea id="bookingMessage"></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Book Now</button>
                 </form>
@@ -779,8 +851,8 @@
         <span id="close-contact-box">&times;</span>
         <h3>Contact Information</h3>
         <div class="contact-info">
-            <p><i class="fas fa-phone"></i> +91 9080119841</p>
-            <p><i class="fas fa-envelope"></i> jayasrimurugan200@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 6374767899</p>
+            <p><i class="fas fa-envelope"></i> aoimidoridigital@gmail.com</p>
         </div>
         <p>Feel free to reach out to us!</p>
     </div>
@@ -799,7 +871,7 @@
             
             shapes.forEach(shape => {
                 const speed = parseFloat(shape.style.width) / 1000;
-                shape.style.transform = translate(${x * speed * 20}px, ${y * speed * 20}px);
+                shape.style.transform = `translate(${x * speed * 20}px, ${y * speed * 20}px)`;
             });
         });
 
@@ -826,12 +898,12 @@
                 const left = Math.random() * 100;
                 const top = -25 + (Math.random() * 50);
                 
-                line.style.left = ${left}%;
-                line.style.top = ${top}%;
+                line.style.left = `${left}%`;
+                line.style.top = `${top}%`;
                 
                 // Random animation duration
                 const duration = 15 + Math.random() * 15;
-                line.style.animationDuration = ${duration}s;
+                line.style.animationDuration = `${duration}s`;
                 
                 neonLines.appendChild(line);
             }
@@ -866,7 +938,7 @@
             }
         });
 
-        // Project Filtering Functionality
+        // Project Filtering Functionality - Fixed to show only digital marketing by default
         document.addEventListener('DOMContentLoaded', function() {
             const filterBtns = document.querySelectorAll('.filter-btn');
             const timelineItems = document.querySelectorAll('.timeline-item');
@@ -903,6 +975,8 @@
         createDynamicLines();
     </script>
     <script src="script.js"></script>
-
 </body> 
 </html>
+
+
+
